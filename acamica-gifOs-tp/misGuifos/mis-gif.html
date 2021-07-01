@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gifOS Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
+    <meta name="author" content="Ximena Hernandez">
+    <link rel="stylesheet" href="../homePage/sailor-day.css">
+    <link rel="stylesheet" href="../homePage/sailor-night.css">
+    <link id="theme" rel="stylesheet" href="../homePage/stylesmain.css">
+</head>
+
+<body>
+    <!-- Header -->
+
+    <div class="welcomeBar"><h3>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</h3>
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="nav-bar">
+        <div class="logo"><img id="logo" onclick="reload()" src="../assets/gifOF_logo.png" alt="logo"></div>
+        <div class="bts-nav">
+            <button class="crearGif btn" id="upload" onclick="crearGuifos()" >Crear Guifos</button>
+            <div class="dropDown">
+                <button onclick="openDropDown()" onblur="closeDropDown()" class="elegirTema btn">Elegir tema</button>
+                <ul class="submenu" id="submenu">
+                    <li><button onclick="cambiarTema('Sailor-Day')" class="btn Sailor-Day">Sailor-Day</button></li>
+                    <li><button onclick="cambiarTema('Sailor-Night')" class="btn Sailor-Night">Sailor-Night</button></li>
+                </ul>
+            </div>
+            <button onclick="openDropDown()" onblur="closeDropDown()" class="elegirTemaDrop btn"><img src="../assets/dropdown.svg" alt="click"></button>
+            <button class="misGif" id="misGif" onclick="misGuifos()">Mis Guifos</button>
+        </div>
+    </div>
+
+    <!-- ************************************************mis-gif**************************************************** -->
+    <div class="bars">
+        <p> Mis guifos</p>
+    </div>
+
+    <!-- galeria  de mis gif -->
+    <div class="gifGalery" id="gifSubidos">
+    </div>
+
+    <!-- ************************************************scrips**************************************************** -->
+    <script src="../homePage/main.js"></script>
+    <script src="../misGuifos/mis-gif.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gifOS Project</title>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
+    <meta name="author" content="Ximena Hernandez">
+    <link rel="stylesheet" href="sailor-day.css">
+    <link rel="stylesheet" href="sailor-night.css">
+    <link id="theme" rel="stylesheet" href="../homePage/stylesmain.css">
+</head>
+
+<body>
+    <!-- Header -->
+
+    <div class="welcomeBar"><h3>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</h3>
+    </div>
+
+    <!-- Buttons -->
+
+    <div class="nav-bar">
+        <div class="logo"><img id="logo" onclick="reload()" src="../assets/gifOF_logo.png" alt="logo"></div>
+        <div class="bts-nav">
+            <button class="crearGif btn" id="upload" onclick="crearGuifos()" >Crear Guifos</button>
+            <div class="dropDown">
+                <button onclick="openDropDown()" onblur="closeDropDown()" class="elegirTema btn">Elegir tema</button>
+                <ul class="submenu" id="submenu">
+                    <li><button onclick="cambiarTema('Sailor-Day')" class="btn Sailor-Day">Sailor-Day</button></li>
+                    <li><button onclick="cambiarTema('Sailor-Night')" class="btn Sailor-Night">Sailor-Night</button></li>
+                </ul>
+            </div>
+            <button onclick="openDropDown()" onblur="closeDropDown()" class="elegirTemaDrop btn"><img src="../assets/dropdown.svg" alt="click"></button>
+            <button class="misGif" id="misGif" onclick="misGuifos()">Mis Guifos</button>
+        </div>
+    </div>
+
+    <!-- Search bar -->
+
+    <div class="searchBar">
+        <h3 class="searchTittle">Buscar</h3>
+        <div class="searchBox">
+            <div class="inputSearch">
+                <input id="input" class="input" onkeypress="enter(); estadoInput()" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+            </div>
+            <button id="btn-search" class="btn search-btn" disabled onclick="comenzarBusqueda()"> <img class="lupa" src="../assets/lupa.svg" alt="lupa">Buscar</button>
+        </div>
+        <div class="dynamic" id="predictions-hidden" >
+            <div class="predictions" id="predictions" >
+                <button class="btn-search-predictions">Sugerencia predictiva</button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Results -->
+ 
+    <div class="dynamic" id="busqueda"  >
+        <div id="btn-hashtags" class="btn-sugerencias" >
+            <button class="btn">#sugerencia 1</button>
+            <button class="btn">#sugerencia 2</button>
+            <button class="btn">#sugerencia 3</button>
+        </div>
+        <!-- cuado con el texto de la busqueda -->
+        <div class="bars">
+            <p id="tex-buscado">Resultados</p>
+        </div>
+        <!-- results gif galery -->
+        <div>
+            <div class="gifGalery" id="gridBusqueda"></div>
+        </div>
+    </div>
+    
+    <!-- Suggestions-->
+  
+    <div class="bars">
+        <p>Hoy te sugerimos:</p>
+    </div>
+ 
+    <div class="gifGalery" id="sugerencias">
+        <!-- gifs traidos con js -->
+    </div>
+
+    <!-- Trends -->
+
+    <div class="bars">
+        <p>Tendencias:</p>
+    </div>
+   
+    <div class="gifGalery" id="tendencias">
+        <!-- gifs traidos con js -->
+    </div>
+
+    <!-- Scripts-->
+    <script src="../homePage/homePage.js"></script>
+    <script src="../homePage/main.js"></script>
+ 
+   
+  
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+:root 
+[color-theme='Sailor-Night'] {
+    /*Body Background */
+    --background-principal: #110038;
+    /* Gradiente */
+    --color-primary: #EE3EFE;
+    --color-secondary: #2E32FB;
+    --gradient-header: linear-gradient(270deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    /* Variables */
+    --bts-color-primary: var(--color-primary);
+    --bts-color-secondary: var(--color-secondary);
+    --bts-color-warm: var(--clr-warm);
+    --bts-color-calm: var(--background-principal);
+    /* Dropdown buttons */
+    --btn-sailor-day: #cccccc;
+    --btn-sailor-day-border: #808080;
+    --btn-sailor-day-shadow: #B4B4B4;
+    --btn-sailor-day-inner-shadow: #FFFFFF;
+    --btn-sailor-night: var(--color-secondary);
+    --btn-sailor-night-border: #33358F;
+    --btn-sailor-night-shadow: #E6DCE4;
+    --btn-sailor-night-inner-shadow: #FFFFFF;
+    /* Buttons, bars, texts, hovers */
+    --color-warm: #FF6161;
+    --bts-warm-shadow: #993A3A;
+    --color-dark: #999999;
+    --background-frame: #B4B4B4;
+    --bts-border-clr: #110038;
+    --bts-top-shadow: #FFFFFF;
+    --bts-bottom-shadow: #A72CB3;
+    --bts-text-clr: #FFFFFF;
+    --bts-hover-color: #ce36db;
+    --btn-sug-border: #4C2F99;
+    --btn-sug-shadow-inner: #2124B3;
+    --btn-sug-shadow-outer: #FFFFFF;
+    --btn-secondary-bg: #33358F;
+    --btn-secondary-bg-hv: #110038;
+    --top-frame-shadow: #FFFFFF;
+    --bottom-frame-shadow: #8F8F8F;
+    --border-clr: #2E32FB;
+    --inner-shadow: #E6DCE4;
+    --outder-shadow: #110038;
+    --suggestion-btn: #CCCCCC;
+  }
+  

@@ -1,0 +1,452 @@
+/***************************** GLOBALS *****************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: "Chakra Petch", sans-serif;
+  background-color: var(--background-principal);
+  padding: 0px 100px;
+}
+
+img {
+  border-style: none;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.bars { 
+  display: flex;
+  justify-content: flex-start;
+  background: #FFFFFF; 
+  border: 1px solid var(--border-clr);
+  box-shadow: inset -2px -2px 0 0 var(--inner-shadow), inset 2px 2px 0 0 var(--outder-shadow);
+  margin: 60px 0px 20px;
+}
+
+.bars p { 
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  margin: 7px;
+}
+
+.dynamic {
+  display: none;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.btn:hover, .btn:active {
+  outline: 1px dotted var(--bts-text-clr);
+  background: var(--bts-hover-color);
+}
+
+.btn:disabled {
+  background: var(--background-frame);
+  color: var(--bottom-frame-shadow);
+  box-shadow: inset -1px -1px 0 0 var(--bottom-frame-shadow), inset 1px 1px 0 0 var(--top-frame-shadow);
+  border: 1px solid var(--btn-sailor-night-border);
+}
+
+.btn:disabled:hover, .btn:disabled:active {
+  outline: none;
+  background: none;
+}
+
+/***************************** HEADER *****************************/
+
+.welcomeBar { 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 23px;
+  padding-left: 10px;
+  background-image: var(--gradient-header);
+  box-shadow: 0 1px 0 0 var(--bts-border-clr);   
+}
+
+.welcomeBar h3 { 
+  font-size: 12px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: 500;
+  padding: 3px 0px 4px 7px;
+}
+
+/***************************** CREATE/THEMES/MY GIFOS BUTTONS *****************************/
+
+/*Estructura botones*/
+.btn {
+  height: 36px;
+  width: 131px;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--bts-text-clr);
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  background: var(--bts-color-primary);
+  border: 1px solid var(--bts-border-clr);
+  box-shadow: inset -1px -1px 0 0 var(--bts-bottom-shadow), inset 1px 1px 0 0 var(--bts-top-shadow);
+  cursor: pointer;
+}
+ 
+.nav-bar { 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 59px 0px 0px;
+}
+
+.nav-bar .bts-nav { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar button { 
+  margin: 0px 16px 0px 0px;
+}
+
+.nav-bar .crearGif {
+  margin: 0px 16px;
+  text-decoration: none;
+  text-align: center;
+  height: 36px;
+  width: 144px;
+}
+
+.nav-bar .elegirTemaDrop {   
+  width: 36px;
+}
+
+.nav-bar .elegirTema { 
+  margin: 0px 0px;
+}
+
+/* Dropdown */
+
+.nav-bar .dropDown {
+  position: relative;
+  z-index: 10;
+}
+
+.nav-bar .submenu {
+  position: absolute;
+  top: 36px;
+  left: 0px;
+  background-color: var(--background-frame); 
+  box-shadow: inset -2px -2px 0 0 var(--bottom-frame-shadow), inset 2px 2px 0 0 var(--top-frame-shadow);
+  width: 167px;
+  padding: 10px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.nav-bar .submenu li {  
+  list-style: none;
+  width: 100%;
+}
+
+.nav-bar .submenu button {  /* JUNTA EL ELEGRIR TEMA CON LA FLECHITA*/
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.nav-bar .mostrar {
+  transition: all 0.2s ease-in-out 0s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-bar .Sailor-Day {
+  color: #110038;
+  background-color: var(--btn-sailor-day);
+  border: 1px solid var(--btn-sailor-day-border);
+  box-shadow: inset -1px -1px 0 0 var(--btn-sailor-day-shadow), inset 1px 1px 0 0 var(--btn-sailor-day-inner-shadow);
+}
+
+.nav-bar .Sailor-Night {
+  background-color: var(--btn-sailor-night);
+  border: 1px solid var(--btn-sailor-night-border);
+  box-shadow: inset -1px -1px 0 0 var(--btn-sailor-night-shadow), inset 1px 1px 0 0 var(--btn-sailor-night-inner-shadow);
+}
+
+/*Mis Gifs Button */
+
+.nav-bar .misGif {
+  text-align: left;
+  color: var(--bts-text-clr);
+  background-color: var(--background-principal);
+  border: none;
+  height: 38px;
+}
+
+.nav-bar .misGif:first-letter {
+  text-decoration: underline;
+}
+
+.nav-bar .misGif:hover{
+  outline: 1px dotted;
+}
+
+.nav-bar .misGif:active {
+  color: #88799b;
+  outline: 1px dotted;
+}
+
+/***************************** SEARCH BAR *****************************/
+
+.searchTittle {
+  font-weight: bold;
+  font-size: 14px;
+  padding-left: 10px;
+  width: 100%;
+  height: 24px;
+  background: var(--gradient-header);
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+.searchBar {
+  position: relative;
+  margin: 20px 0px 20px;
+  padding: 2px;
+  width: 100%;
+  align-items: center;
+  box-shadow: inset -2px -2px 0 0 var(--bottom-frame-shadow), inset 2px 2px 0 0 var(--top-frame-shadow);
+}
+
+.searchBox {
+  width: 100%;
+  background: var(--background-frame);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16.5px;
+}
+
+/* Boton Lupa */
+.searchBox .search-btn {
+  margin-top: 2.5px;
+  width: 102px;
+}
+
+/* Input */
+.searchBox .inputSearch {
+  position: relative;
+  width: inherit;
+  padding: 0px 8px 0px 0px;
+}
+
+.searchBox .input {
+  width: 100%;
+  height: 48px;
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  padding-left: 16px;
+  margin-right: 8px;
+}
+
+.searchBox .btn-lupa {
+  position: absolute;
+  top: 25%;
+  left: 97%;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+}
+
+/***************************** RESULTADOS DE LA BUSQUEDA *****************************/
+
+.predictions {
+  z-index: 10;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  padding: 16px 15% 10px 16px;
+  background: var(--background-frame);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  box-shadow: inset -2px -2px 0 0 var(--bottom-frame-shadow), inset 2px 2px 0 0 var(--top-frame-shadow);
+}
+
+.btn-search-predictions {
+  background: var(--suggestion-btn);
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 6px;
+  padding: 6px 15px;
+  text-align: left;
+}
+
+.btn-search-predictions:hover {
+  border: 1px dotted #110038;
+}
+
+.btn-sugerencias button {
+  width: fit-content;
+  margin-right: 8px;
+  padding: 0px 10px;
+  background: var(--color-secondary);
+}
+
+.btn-sugerencias button:hover {
+  background: var(--color-secondary);
+}
+
+/***************************** GIF GALERY *****************************/
+
+.gifGalery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 9px;
+}
+
+.gifCard img {
+  height: 100%;
+  width: 100%;
+}
+
+.suggestionCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-frame);
+  box-shadow: inset -2px -2px 0 0 var(--bottom-frame-shadow), inset 2px 2px 0 0 var(--top-frame-shadow);
+  padding: 2px;
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.suggestionCard img {    
+  width: 100%;
+  height: 100%;
+}
+
+.suggestionCard .suge-btn-vermas {
+  cursor: pointer;
+  position: absolute;
+  bottom: 19px;
+  left: 11px;
+  color: #FFFFFF;
+  width: fit-content;
+  padding: 8px 10px;
+  background: var(--color-secondary);
+  border: 1px solid var(--btn-sug-border);
+  box-shadow: inset -2px -2px 0 0 var(--btn-sug-shadow-inner), inset 2px 2px 0 0 var(--btn-sug-shadow-outer);
+}
+
+.suggestionCard .suge-btn-vermas:hover, .suggestionCard .suge-btn-vermas:active {
+  outline: 1px dotted var(--bts-text-clr);
+}
+
+.suggestionHeader {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  padding: 4px;
+  background: var(--gradient-header);
+}
+
+.suggestionHeader p {
+  width: auto;
+  padding-right: 5px;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.suggestionHeader img {
+  width: 16px;
+  height: 14px;
+}
+
+/* Gif galery Tendencias */
+
+.gifCard {
+  position: relative;
+  height: 280px;
+  padding: 2px;
+  overflow: hidden;
+}
+
+.gifCard img:hover ~ .foot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradient-header);
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  width: 99%;
+  font-size: 14px;
+  letter-spacing: 0;
+  font-weight: bold;
+  height: 24px;
+}
+
+.gifCard .foot {
+  display: none;
+}
+
+.gifCard .foot p {
+  padding: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.gifCard:hover {
+  background: var(--background-frame);
+  box-shadow: inset -2px -2px 0 0 var(--bottom-frame-shadow), inset 2px 2px 0 0 var(--top-frame-shadow);
+}
+
+
+
